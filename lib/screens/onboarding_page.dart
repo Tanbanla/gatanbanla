@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_app_map_car/screens/car_list_view.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
@@ -28,7 +29,14 @@ class OnboardingPage extends StatelessWidget {
               height: 54,
               child: 
                 ElevatedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context, 
+                    MaterialPageRoute(
+                      builder: (context) => 
+                        CarList()
+                      )
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.black,
                     backgroundColor:  Colors.white,

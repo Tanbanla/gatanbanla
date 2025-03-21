@@ -6,7 +6,7 @@ class CarCard extends StatelessWidget {
   const CarCard({super.key, required this.car});
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return GestureDetector(
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         padding: EdgeInsets.all(20),
@@ -45,6 +45,11 @@ class CarCard extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(width: 120,),
+                Text('\$${car.pricePerHour.toStringAsFixed(2)}/h', style: TextStyle(
+                  fontSize: 16,
+                ),),
+                
               ],
             ),
           ],

@@ -17,6 +17,11 @@ class CarList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Choose Your Car'),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+      ),
       body: ListView.builder(
         itemCount: cars.length,
         itemBuilder: (context, index) {
